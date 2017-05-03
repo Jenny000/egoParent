@@ -36,7 +36,9 @@ public class FileUploadServiceImpl implements FileUploadService {
         FileResult result=null;
         FileUploadUtil fileUploadUtil =null;
         //得到文件上传至服务器中的名称
-        String remotname=FileUploadUtil.fileUpload(ftpHost,ftpUsername,ftpPassword,fftpPath)
+       // String remotname=FileUploadUtil.fileUpload(ftpHost,ftpUsername,ftpPassword,fftpPath)
+        System.out.println("hhhh");
+        return null;
 
     }
 }

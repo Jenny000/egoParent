@@ -42,6 +42,7 @@ public class ProductContorller {
      */
     @RequestMapping("/category/list")
     public String categoryList(){
+
         return "product/category-list";
     }
 }
