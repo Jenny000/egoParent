@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ego-common/ego-common.iml" filepath="$PROJECT_DIR$/ego-common/ego-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egomanager/ego-manager-mapper/ego-manager-mapper.iml" filepath="$PROJECT_DIR$/egomanager/ego-manager-mapper/ego-manager-mapper.iml" group="egomanager and modules" />
+      <module fileurl="file://$PROJECT_DIR$/egomanager/ego-manager-pojo/ego-manager-pojo.iml" filepath="$PROJECT_DIR$/egomanager/ego-manager-pojo/ego-manager-pojo.iml" group="egomanager and modules" />
+      <module fileurl="file://$PROJECT_DIR$/egomanager/ego-manager-service/ego-manager-service.iml" filepath="$PROJECT_DIR$/egomanager/ego-manager-service/ego-manager-service.iml" group="egomanager and modules" />
+      <module fileurl="file://$PROJECT_DIR$/egomanager/ego-manager-web/ego-manager-web.iml" filepath="$PROJECT_DIR$/egomanager/ego-manager-web/ego-manager-web.iml" group="egomanager and modules" />
+      <module fileurl="file://$PROJECT_DIR$/egoParent.iml" filepath="$PROJECT_DIR$/egoParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egomanager/egomanager.iml" filepath="$PROJECT_DIR$/egomanager/egomanager.iml" />
+    </modules>
+  </component>
+</project>
