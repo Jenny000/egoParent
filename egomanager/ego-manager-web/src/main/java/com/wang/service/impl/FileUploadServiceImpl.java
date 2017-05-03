@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
 
@@ -30,15 +31,28 @@ public class FileUploadServiceImpl implements FileUploadService {
     private String ftpPath;
 
     @Override
-    public FileUploadService fileUploadSave(String originalFileName, InputStream inputStream) {
+    public FileResult fileUploadSave(String fileName, InputStream inputStream) {
         //得到日期 格式 2016/12/20
         String path = DateUtil.getDateStr(new Date(),DateUtil.pattern_xg);
         FileResult result=null;
-        FileUploadUtil fileUploadUtil =null;
-        //得到文件上传至服务器中的名称
-       // String remotname=FileUploadUtil.fileUpload(ftpHost,ftpUsername,ftpPassword,fftpPath)
-        System.out.println("hhhh");
-        return null;
+
+
+        try {
+            //得到文件上传至服务器中的名称
+            String remotname=FileUploadUtil.fileUpload(ftpHost,ftpUsername,ftpPassword,fileName,
+                    inputStream, ftpPath+"/"+path);
+            if(remotname!=null && remotname.length()>0){
+                String imageUrl=(ftpHost+"/"+path+remotname);
+                result=new FileResult();
+                result.setSuccess("文件上传成功");
+                result.setFileUrl(imageUrl);
+            }
+        } catch (IOException e) {
+            logger.error("文件上传失败" +e.getMessage());
+            e.printStackTrace();
+        }
+       return result;
+
 
     }
 }
